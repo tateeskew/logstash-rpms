@@ -1,0 +1,24 @@
+#! /bin/bash
+
+usage() {
+    echo "$0 - a script to build logstash rpms"
+    echo "Options:"
+    echo " -d - do package the rpm"
+}
+
+if [ "$1" != "-d" ]; then
+    usage
+    exit 1
+fi
+
+set -e
+readonly BASEDIR=$(readlink -f $(dirname "$0")/../)
+mkdir -p ${BASEDIR}/{RPMS,BUILD}
+
+#for spec in grok logstash; do
+ 
+for spec in grok logstash; do
+    rpmbuild --verbose \
+	--define "_topdir ${BASEDIR}" \
+	-bb "${BASEDIR}/SPECS/${spec}.spec"
+done
