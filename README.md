@@ -15,6 +15,12 @@ Tries to follow the [Java packaging guidelines](https://fedoraproject.org/wiki/P
 * init script
 * Running as user logstash in group logstash
 
+There are two scripts that can be executed in the scripts directory. One will fetch the source files needed (make sure versions are correct
+in the script) and the other will execute the build.
+
+scripts/get_sources
+scripts/rpm
+
 Acknowledgments
 ---------------
 
