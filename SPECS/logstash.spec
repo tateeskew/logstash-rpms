@@ -142,7 +142,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_initddir}/%{name}
 %config(noreplace) %{sysconfigdir}/*
 
-%defattr(-,%{name},%{name},-)
+%defattr(-,%{name},root,775)
 %dir %{logdir}/
 %dir %{piddir}/
 
