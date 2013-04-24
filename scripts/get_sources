@@ -16,5 +16,5 @@ BASEDIR=$(readlink -f $(dirname "$0")/../)
 mkdir -p "${BASEDIR}/SOURCES"
 cd "${BASEDIR}/SOURCES"
 
-wget https://logstash.objects.dreamhost.com/release/logstash-1.1.9-monolithic.jar
+wget https://logstash.objects.dreamhost.com/release/logstash-1.1.10-monolithic.jar
 wget http://semicomplete.googlecode.com/files/grok-1.20110708.1.tar.gz 
